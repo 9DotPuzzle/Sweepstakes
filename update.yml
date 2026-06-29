@@ -1,0 +1,38 @@
+name: Update bracket
+
+on:
+  schedule:
+    - cron: '0 8 * * *'    # 09:00 BST daily (your morning refresh)
+    - cron: '0 22 * * *'   # 23:00 BST — catches evening/late games
+  workflow_dispatch: {}    # lets you run it on demand from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-bracket
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Fetch results and rebuild data.json
+        env:
+          FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
+        run: node update.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "bracket-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          if git diff --staged --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update results $(date -u +%FT%TZ)"
+            git push
+          fi

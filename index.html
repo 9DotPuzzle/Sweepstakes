@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Office World Cup Sweepstakes — Live Bracket</title>
+<style>
+  :root{
+    --bg:#0f262d; --panel:#143139; --panel-2:#193a44; --line:#27505b;
+    --ink:#f0e9d8; --ink-dim:#a9b9bc; --ink-faint:#76898d;
+    --through:#46c79a; --through-bg:#123c34; --out:#5d6f73; --signal:#f2a23b;
+  }
+  *{box-sizing:border-box} html,body{margin:0}
+  body{background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+  .wrap{max-width:1280px;margin:0 auto;padding:20px 18px 60px}
+  header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px}
+  .flags{display:flex;gap:4px;margin-bottom:10px}.flags span{width:16px;height:11px;border-radius:2px;display:block}
+  h1{font-size:26px;line-height:1.1;margin:0;font-weight:650;letter-spacing:-.01em}
+  .sub{color:var(--ink-dim);font-size:13.5px;margin-top:4px}
+  .meta{font-size:12px;color:var(--ink-faint);text-align:right}.meta b{color:var(--ink-dim)}
+  button{font:inherit;font-size:13px;cursor:pointer;color:var(--ink);background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:8px 13px;margin-top:8px}
+  button:hover{border-color:var(--ink-faint)}
+  .lead{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:18px 0 22px}
+  .lead h2{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);margin:0 0 12px;font-weight:600}
+  .champ{display:none;align-items:center;gap:10px;background:var(--through-bg);border:1px solid var(--through);border-radius:8px;padding:10px 14px;margin-bottom:14px;color:var(--through);font-weight:600}
+  .owners{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+  .owner{display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:8px 11px}
+  .owner.dead{opacity:.5}.owner .who{font-size:13.5px}.owner .who small{display:block;color:var(--ink-faint);font-size:11px;margin-top:1px}
+  .teamdots{display:flex;gap:5px;flex-shrink:0}.dot{font-size:11px;padding:2px 7px;border-radius:20px;background:#1d4049;color:var(--ink-dim);white-space:nowrap}
+  .dot.alive{color:var(--through);box-shadow:inset 0 0 0 1px var(--through)}.dot.out{color:var(--out);text-decoration:line-through}
+  .scrollhint{font-size:12px;color:var(--ink-faint);margin:0 0 8px}.scroller{overflow-x:auto;padding-bottom:14px}
+  .bracket{display:flex;gap:26px;min-width:1180px;align-items:stretch}
+  .round{display:flex;flex-direction:column;flex:1;min-width:212px}
+  .round-h{font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:8px;height:16px}
+  .matches{display:flex;flex-direction:column;flex:1}
+  .match{flex:1;display:flex;flex-direction:column;justify-content:center;padding:5px 0}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .when{font-size:10.5px;color:var(--ink-faint);text-align:center;padding:3px 0;background:rgba(0,0,0,.16)}.when .ft{color:var(--through)}
+  .scbar{font-size:10.5px;text-align:center;padding:4px 0;background:rgba(0,0,0,.16);color:var(--ink-dim)}.scbar .pens{color:var(--signal)}
+  .slot{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 11px}
+  .slot+.slot{border-top:1px solid var(--line)}
+  .slot .nm{font-size:14px;display:flex;align-items:center;gap:7px;flex:1;min-width:0}
+  .slot .goal{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;flex-shrink:0}.slot .goal sup{font-size:9px;color:var(--ink-faint)}
+  .slot .ow{font-size:11px;color:var(--ink-faint);white-space:nowrap;flex-shrink:0}
+  .slot.win{background:var(--through-bg)}.slot.win .nm,.slot.win .ow,.slot.win .goal{color:var(--through)}.slot.win .nm{font-weight:600}
+  .slot.lose .nm{color:var(--out);text-decoration:line-through}.slot.lose .ow,.slot.lose .goal{color:var(--out)}
+  .slot.tbd .nm{color:var(--ink-faint)}
+  .tick{width:15px;height:15px;flex-shrink:0}
+  .champcard .card{border-color:var(--signal)}.champ-label{font-size:11px;color:var(--signal);text-align:center;padding:4px 0;font-weight:600}
+  footer{margin-top:26px;font-size:12px;color:var(--ink-faint);max-width:760px}
+  .err{background:#3a1f1f;border:1px solid #7a3b3b;color:#f0c9c9;padding:10px 14px;border-radius:8px;margin:14px 0;font-size:13px;display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="flags" aria-hidden="true"><span style="background:#46c79a"></span><span style="background:#f2a23b"></span><span style="background:#3b8bd4"></span><span style="background:#e24b4a"></span><span style="background:#f0e9d8"></span></div>
+      <h1 id="title">Office World Cup Sweepstakes</h1>
+      <div class="sub">2026 knockout bracket · updates automatically as results come in</div>
+    </div>
+    <div class="meta">
+      <div><b>Teams in play:</b> <span id="aliveCount">—</span></div>
+      <div id="updated">Updated: —</div>
+      <button id="refresh">Refresh</button>
+    </div>
+  </header>
+
+  <div class="err" id="err"></div>
+  <div class="lead">
+    <div class="champ" id="champBanner"></div>
+    <h2>Owner standings</h2>
+    <div class="owners" id="owners"></div>
+  </div>
+
+  <p class="scrollhint">Scroll sideways to see later rounds →</p>
+  <div class="scroller"><div class="bracket" id="bracket"></div></div>
+
+  <footer>
+    Results are fetched automatically on a schedule and committed to this page — no manual entry.
+    Kick-off times are UK local (BST). Round of 16 onward shows the scheduled fixture slots; the
+    auto-update fills in winners and scores once each game finishes.
+  </footer>
+</div>
+
+<script>
+const SIZES=[16,8,4,2,1];
+let CFG=null, DATA=null, NAME2SEED={};
+
+async function load(){
+  try{
+    const bust='?_='+Date.now();
+    const [c,d]=await Promise.all([
+      fetch('./config.json'+bust).then(r=>r.json()),
+      fetch('./data.json'+bust).then(r=>r.json()).catch(()=>({winners:{},scores:{},updated:null,source:'none yet'}))
+    ]);
+    CFG=c; DATA=d;
+    CFG.seed.forEach((t,i)=>NAME2SEED[t.team]=i);
+    document.getElementById('title').textContent=CFG.title||'Office World Cup Sweepstakes';
+    document.getElementById('err').style.display='none';
+    render();
+  }catch(e){
+    const el=document.getElementById('err'); el.style.display='block';
+    el.textContent='Could not load bracket data: '+e.message;
+  }
+}
+
+// winner seed index for a match, from data.winners (team names)
+function winnerSeed(id){ const n=DATA.winners&&DATA.winners[id]; return n!=null?NAME2SEED[n]:undefined; }
+function candidates(round,m){
+  if(round===0) return [2*m,2*m+1];
+  return [winnerSeed(`r${round-1}m${2*m}`), winnerSeed(`r${round-1}m${2*m+1}`)];
+}
+function scoreObj(round,m){
+  const s=DATA.scores&&DATA.scores[`r${round}m${m}`];
+  if(!s) return null;
+  const pens=(s.pa!=null&&s.pb!=null);
+  return {g:[s.a,s.b], p:pens?[s.pa,s.pb]:null};
+}
+function eliminated(){
+  const out=new Set();
+  for(let r=0;r<5;r++)for(let m=0;m<SIZES[r];m++){
+    const w=winnerSeed(`r${r}m${m}`); if(w===undefined) continue;
+    const c=candidates(r,m);
+    [0,1].forEach(k=>{ if(c[k]!==undefined&&c[k]!==w) out.add(c[k]); });
+  }
+  return out;
+}
+function wins(){
+  const w={}; for(let r=0;r<5;r++)for(let m=0;m<SIZES[r];m++){const s=winnerSeed(`r${r}m${m}`); if(s!==undefined)w[s]=(w[s]||0)+1;} return w;
+}
+
+function slot(round,m,side){
+  const c=candidates(round,m), seed=c[side], won=winnerSeed(`r${round}m${m}`);
+  if(seed===undefined) return `<div class="slot tbd"><span class="nm">To be decided</span></div>`;
+  const t=CFG.seed[seed]; let cls="slot";
+  if(won!==undefined) cls+=(won===seed)?" win":" lose";
+  const tick=(won===seed)?`<svg class="tick" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 4.5"/></svg>`:"";
+  const sc=scoreObj(round,m); let goal="";
+  if(sc){const g=sc.g[side]; const p=sc.p?`<sup>${sc.p[side]}</sup>`:""; goal=`<span class="goal">${g}${p}</span>`;}
+  return `<div class="${cls}"><span class="nm">${tick}${t.team}</span>${goal}<span class="ow">${t.owner}</span></div>`;
+}
+function schedLine(round,m){
+  const s=CFG.schedule[String(round)] && CFG.schedule[String(round)][m]; if(!s) return "";
+  const decided=winnerSeed(`r${round}m${m}`)!==undefined;
+  const ft=decided?' · <span class="ft">FT</span>':'';
+  return `<div class="when">${s[0]} · ${s[1]} BST${ft}</div>`;
+}
+function scoreBar(round,m){
+  const sc=scoreObj(round,m); if(!sc) return "";
+  const pens=sc.p?`<span class="pens"> (${sc.p[0]}–${sc.p[1]} pens)</span>`:"";
+  return `<div class="scbar">${sc.g[0]}–${sc.g[1]}${pens}</div>`;
+}
+
+function render(){
+  let html="";
+  for(let r=0;r<5;r++){
+    html+=`<div class="round"><div class="round-h">${CFG.roundNames[r]}</div><div class="matches">`;
+    for(let m=0;m<SIZES[r];m++)
+      html+=`<div class="match"><div class="card">${slot(r,m,0)}${slot(r,m,1)}${schedLine(r,m)}${scoreBar(r,m)}</div></div>`;
+    html+=`</div></div>`;
+  }
+  const champ=winnerSeed("r4m0");
+  html+=`<div class="round champcard" style="flex:.7;min-width:170px"><div class="round-h">Champion</div><div class="matches"><div class="match"><div class="card"><div class="champ-label">Winner</div>`;
+  html+= champ!==undefined
+    ? `<div class="slot win"><span class="nm">${CFG.seed[champ].team}</span><span class="ow">${CFG.seed[champ].owner}</span></div>`
+    : `<div class="slot tbd"><span class="nm">To be decided</span></div>`;
+  html+=`</div></div></div></div>`;
+  document.getElementById("bracket").innerHTML=html;
+
+  // standings
+  const out=eliminated(), w=wins();
+  const inKnockout=new Set(CFG.seed.map(t=>t.team));
+  const rows=CFG.sweep.map(o=>{
+    const teams=o.teams.map(name=>{
+      const inKO=inKnockout.has(name);
+      const seed=NAME2SEED[name];
+      const alive= inKO && !out.has(seed);
+      return {name, alive, grp:!inKO};
+    });
+    const alive=teams.filter(t=>t.alive).length;
+    const ws=o.teams.reduce((a,n)=>a+(NAME2SEED[n]!=null?(w[NAME2SEED[n]]||0):0),0);
+    return {owner:o.owner, teams, alive, w:ws};
+  }).sort((a,b)=> b.alive-a.alive || b.w-a.w || a.owner.localeCompare(b.owner));
+  document.getElementById("owners").innerHTML=rows.map(r=>{
+    const dots=r.teams.map(t=>`<span class="dot ${t.alive?'alive':'out'}">${t.name}</span>`).join("");
+    return `<div class="owner ${r.alive===0?'dead':''}"><span class="who">${r.owner}<small>${r.alive} alive · ${r.w} ${r.w===1?'win':'wins'}</small></span><span class="teamdots">${dots}</span></div>`;
+  }).join("");
+
+  document.getElementById("aliveCount").textContent=(CFG.seed.length-out.size)+" of "+CFG.seed.length;
+  const banner=document.getElementById("champBanner");
+  if(champ!==undefined){banner.style.display="flex";banner.textContent=`🏆  Champion: ${CFG.seed[champ].team} — ${CFG.seed[champ].owner}`;}
+  else banner.style.display="none";
+  const u=DATA.updated?new Date(DATA.updated):null;
+  document.getElementById("updated").textContent="Updated: "+(u?u.toLocaleString(undefined,{month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"}):"—")+(DATA.source?" · "+DATA.source:"");
+}
+
+document.getElementById("refresh").onclick=load;
+load();
+</script>
+</body>
+</html>

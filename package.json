@@ -1,0 +1,6 @@
+{
+  "name": "wc-sweepstakes-bracket",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" }
+}

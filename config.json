@@ -1,0 +1,556 @@
+{
+  "competition": "WC",
+  "title": "Office World Cup Sweepstakes",
+  "roundNames": [
+    "Round of 32",
+    "Round of 16",
+    "Quarter-finals",
+    "Semi-finals",
+    "Final"
+  ],
+  "seed": [
+    {
+      "team": "South Africa",
+      "owner": "Simon B.",
+      "aliases": [
+        "south africa"
+      ]
+    },
+    {
+      "team": "Canada",
+      "owner": "Renata B.",
+      "aliases": [
+        "canada"
+      ]
+    },
+    {
+      "team": "Netherlands",
+      "owner": "Kryz Z.",
+      "aliases": [
+        "netherlands",
+        "holland"
+      ]
+    },
+    {
+      "team": "Morocco",
+      "owner": "Chris M.",
+      "aliases": [
+        "morocco"
+      ]
+    },
+    {
+      "team": "Germany",
+      "owner": "Nicoleta M.",
+      "aliases": [
+        "germany"
+      ]
+    },
+    {
+      "team": "Paraguay",
+      "owner": "Oliver C.",
+      "aliases": [
+        "paraguay"
+      ]
+    },
+    {
+      "team": "France",
+      "owner": "Renata B.",
+      "aliases": [
+        "france"
+      ]
+    },
+    {
+      "team": "Sweden",
+      "owner": "Matt V.",
+      "aliases": [
+        "sweden"
+      ]
+    },
+    {
+      "team": "Brazil",
+      "owner": "Udham S.",
+      "aliases": [
+        "brazil"
+      ]
+    },
+    {
+      "team": "Japan",
+      "owner": "Joe G.",
+      "aliases": [
+        "japan"
+      ]
+    },
+    {
+      "team": "Ivory Coast",
+      "owner": "Felix B.",
+      "aliases": [
+        "ivory coast",
+        "cote divoire",
+        "cote d ivoire",
+        "côte d'ivoire"
+      ]
+    },
+    {
+      "team": "Norway",
+      "owner": "Eduardo A.",
+      "aliases": [
+        "norway"
+      ]
+    },
+    {
+      "team": "Mexico",
+      "owner": "Andrei M.",
+      "aliases": [
+        "mexico"
+      ]
+    },
+    {
+      "team": "Ecuador",
+      "owner": "Jon G.",
+      "aliases": [
+        "ecuador"
+      ]
+    },
+    {
+      "team": "England",
+      "owner": "Paul R.",
+      "aliases": [
+        "england"
+      ]
+    },
+    {
+      "team": "Congo DR",
+      "owner": "Eduardo A.",
+      "aliases": [
+        "congo dr",
+        "dr congo",
+        "democratic republic of congo",
+        "drc",
+        "congo"
+      ]
+    },
+    {
+      "team": "Spain",
+      "owner": "Paul R.",
+      "aliases": [
+        "spain"
+      ]
+    },
+    {
+      "team": "Austria",
+      "owner": "Kryz Z.",
+      "aliases": [
+        "austria"
+      ]
+    },
+    {
+      "team": "Portugal",
+      "owner": "Sorin I.",
+      "aliases": [
+        "portugal"
+      ]
+    },
+    {
+      "team": "Croatia",
+      "owner": "Andrei M.",
+      "aliases": [
+        "croatia"
+      ]
+    },
+    {
+      "team": "Belgium",
+      "owner": "Joe M.",
+      "aliases": [
+        "belgium"
+      ]
+    },
+    {
+      "team": "Senegal",
+      "owner": "Jim 2",
+      "aliases": [
+        "senegal"
+      ]
+    },
+    {
+      "team": "USA",
+      "owner": "Joe G.",
+      "aliases": [
+        "usa",
+        "united states",
+        "united states of america"
+      ]
+    },
+    {
+      "team": "Bosnia",
+      "owner": "Simon B.",
+      "aliases": [
+        "bosnia",
+        "bosnia and herzegovina",
+        "bosnia-herzegovina"
+      ]
+    },
+    {
+      "team": "Australia",
+      "owner": "Will T.",
+      "aliases": [
+        "australia"
+      ]
+    },
+    {
+      "team": "Egypt",
+      "owner": "Ben/Alex",
+      "aliases": [
+        "egypt"
+      ]
+    },
+    {
+      "team": "Argentina",
+      "owner": "Chris M.",
+      "aliases": [
+        "argentina"
+      ]
+    },
+    {
+      "team": "Cape Verde",
+      "owner": "Sorin I.",
+      "aliases": [
+        "cape verde",
+        "cabo verde"
+      ]
+    },
+    {
+      "team": "Switzerland",
+      "owner": "Ross M.",
+      "aliases": [
+        "switzerland"
+      ]
+    },
+    {
+      "team": "Algeria",
+      "owner": "Jim 2",
+      "aliases": [
+        "algeria"
+      ]
+    },
+    {
+      "team": "Colombia",
+      "owner": "Oliver C.",
+      "aliases": [
+        "colombia"
+      ]
+    },
+    {
+      "team": "Ghana",
+      "owner": "Jim 1",
+      "aliases": [
+        "ghana"
+      ]
+    }
+  ],
+  "schedule": {
+    "0": [
+      [
+        "Sun 28 Jun",
+        "20:00"
+      ],
+      [
+        "Tue 30 Jun",
+        "02:00"
+      ],
+      [
+        "Mon 29 Jun",
+        "21:30"
+      ],
+      [
+        "Tue 30 Jun",
+        "22:00"
+      ],
+      [
+        "Mon 29 Jun",
+        "18:00"
+      ],
+      [
+        "Tue 30 Jun",
+        "18:00"
+      ],
+      [
+        "Wed 1 Jul",
+        "02:00"
+      ],
+      [
+        "Wed 1 Jul",
+        "17:00"
+      ],
+      [
+        "Thu 2 Jul",
+        "20:00"
+      ],
+      [
+        "Fri 3 Jul",
+        "00:00"
+      ],
+      [
+        "Wed 1 Jul",
+        "21:00"
+      ],
+      [
+        "Thu 2 Jul",
+        "01:00"
+      ],
+      [
+        "Fri 3 Jul",
+        "19:00"
+      ],
+      [
+        "Fri 3 Jul",
+        "23:00"
+      ],
+      [
+        "Fri 3 Jul",
+        "04:00"
+      ],
+      [
+        "Sat 4 Jul",
+        "02:30"
+      ]
+    ],
+    "1": [
+      [
+        "Sat 4 Jul",
+        "18:00"
+      ],
+      [
+        "Sat 4 Jul",
+        "22:00"
+      ],
+      [
+        "Sun 5 Jul",
+        "21:00"
+      ],
+      [
+        "Mon 6 Jul",
+        "01:00"
+      ],
+      [
+        "Mon 6 Jul",
+        "20:00"
+      ],
+      [
+        "Tue 7 Jul",
+        "01:00"
+      ],
+      [
+        "Tue 7 Jul",
+        "17:00"
+      ],
+      [
+        "Tue 7 Jul",
+        "21:00"
+      ]
+    ],
+    "2": [
+      [
+        "Thu 9 Jul",
+        "21:00"
+      ],
+      [
+        "Fri 10 Jul",
+        "20:00"
+      ],
+      [
+        "Sat 11 Jul",
+        "22:00"
+      ],
+      [
+        "Sun 12 Jul",
+        "02:00"
+      ]
+    ],
+    "3": [
+      [
+        "Tue 14 Jul",
+        "20:00"
+      ],
+      [
+        "Wed 15 Jul",
+        "20:00"
+      ]
+    ],
+    "4": [
+      [
+        "Sun 19 Jul",
+        "20:00"
+      ]
+    ]
+  },
+  "sweep": [
+    {
+      "owner": "Andrei M.",
+      "teams": [
+        "Mexico",
+        "Croatia"
+      ]
+    },
+    {
+      "owner": "Chris M.",
+      "teams": [
+        "Argentina",
+        "Morocco"
+      ]
+    },
+    {
+      "owner": "Joe G.",
+      "teams": [
+        "USA",
+        "Japan"
+      ]
+    },
+    {
+      "owner": "Simon B.",
+      "teams": [
+        "Bosnia",
+        "South Africa"
+      ]
+    },
+    {
+      "owner": "Kryz Z.",
+      "teams": [
+        "Austria",
+        "Netherlands"
+      ]
+    },
+    {
+      "owner": "Jon G.",
+      "teams": [
+        "Iran",
+        "Ecuador"
+      ]
+    },
+    {
+      "owner": "Udham S.",
+      "teams": [
+        "Brazil",
+        "Saudi Arabia"
+      ]
+    },
+    {
+      "owner": "Paul R.",
+      "teams": [
+        "England",
+        "Spain"
+      ]
+    },
+    {
+      "owner": "Sorin I.",
+      "teams": [
+        "Portugal",
+        "Cape Verde"
+      ]
+    },
+    {
+      "owner": "Joe M.",
+      "teams": [
+        "Belgium",
+        "Tunisia"
+      ]
+    },
+    {
+      "owner": "Renata B.",
+      "teams": [
+        "Canada",
+        "France"
+      ]
+    },
+    {
+      "owner": "Matt V.",
+      "teams": [
+        "Türkiye",
+        "Sweden"
+      ]
+    },
+    {
+      "owner": "Jim 2",
+      "teams": [
+        "Senegal",
+        "Algeria"
+      ]
+    },
+    {
+      "owner": "Will T.",
+      "teams": [
+        "Australia",
+        "New Zealand"
+      ]
+    },
+    {
+      "owner": "Felix B.",
+      "teams": [
+        "Iraq",
+        "Ivory Coast"
+      ]
+    },
+    {
+      "owner": "Ross M.",
+      "teams": [
+        "Switzerland",
+        "Haiti"
+      ]
+    },
+    {
+      "owner": "Nathan S.",
+      "teams": [
+        "Panama",
+        "Jordan"
+      ]
+    },
+    {
+      "owner": "Iulian M.",
+      "teams": [
+        "Qatar",
+        "Curacao"
+      ]
+    },
+    {
+      "owner": "Jim 1",
+      "teams": [
+        "Scotland",
+        "Ghana"
+      ]
+    },
+    {
+      "owner": "Daniel W",
+      "teams": [
+        "Uruguay",
+        "Uzbekistan"
+      ]
+    },
+    {
+      "owner": "Ben/Alex",
+      "teams": [
+        "Czechia",
+        "Egypt"
+      ]
+    },
+    {
+      "owner": "Nicoleta M.",
+      "teams": [
+        "Germany",
+        "South Korea"
+      ]
+    },
+    {
+      "owner": "Oliver C.",
+      "teams": [
+        "Colombia",
+        "Paraguay"
+      ]
+    },
+    {
+      "owner": "Eduardo A.",
+      "teams": [
+        "Norway",
+        "Congo DR"
+      ]
+    }
+  ]
+}
