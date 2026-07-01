@@ -1,11 +1,14 @@
 {
-  "updated": "2026-06-30T08:56:57.052Z",
+  "updated": "2026-07-01T10:55:35.165Z",
   "source": "football-data.org",
   "winners": {
     "r0m0": "Canada",
     "r0m1": "Morocco",
     "r0m2": "Paraguay",
-    "r0m4": "Brazil"
+    "r0m3": "France",
+    "r0m4": "Brazil",
+    "r0m5": "Norway",
+    "r0m6": "Mexico"
   },
   "scores": {
     "r0m0": {
@@ -26,9 +29,27 @@
       "pa": 3,
       "pb": 4
     },
+    "r0m3": {
+      "a": 3,
+      "b": 0,
+      "pa": null,
+      "pb": null
+    },
     "r0m4": {
       "a": 2,
       "b": 1,
+      "pa": null,
+      "pb": null
+    },
+    "r0m5": {
+      "a": 1,
+      "b": 2,
+      "pa": null,
+      "pb": null
+    },
+    "r0m6": {
+      "a": 2,
+      "b": 0,
       "pa": null,
       "pb": null
     }
