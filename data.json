@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T15:35:26.616Z",
+  "updated": "2026-07-04T08:12:19.490Z",
   "source": "football-data.org",
   "winners": {
     "r0m0": "Canada",
@@ -14,7 +14,10 @@
     "r0m9": "Portugal",
     "r0m10": "Belgium",
     "r0m11": "USA",
-    "r0m14": "Switzerland"
+    "r0m12": "Egypt",
+    "r0m13": "Argentina",
+    "r0m14": "Switzerland",
+    "r0m15": "Colombia"
   },
   "scores": {
     "r0m0": {
@@ -89,8 +92,26 @@
       "pa": null,
       "pb": null
     },
+    "r0m12": {
+      "a": 3,
+      "b": 5,
+      "pa": 2,
+      "pb": 4
+    },
+    "r0m13": {
+      "a": 3,
+      "b": 2,
+      "pa": null,
+      "pb": null
+    },
     "r0m14": {
       "a": 2,
+      "b": 0,
+      "pa": null,
+      "pb": null
+    },
+    "r0m15": {
+      "a": 1,
       "b": 0,
       "pa": null,
       "pb": null
