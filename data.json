@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T22:35:13.910Z",
+  "updated": "2026-07-19T09:45:54.187Z",
   "source": "football-data.org",
   "winners": {
     "r0m0": "Canada",
@@ -29,7 +29,8 @@
     "r2m0": "France",
     "r2m1": "England",
     "r2m2": "Spain",
-    "r2m3": "Argentina"
+    "r2m3": "Argentina",
+    "r3m0": "England"
   },
   "scores": {
     "r0m0": {
@@ -197,6 +198,12 @@
     "r2m3": {
       "a": 3,
       "b": 1,
+      "pa": null,
+      "pb": null
+    },
+    "r3m0": {
+      "a": 4,
+      "b": 6,
       "pa": null,
       "pb": null
     }
